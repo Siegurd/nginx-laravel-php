@@ -1,0 +1,14 @@
+---
+- hosts: server1
+  vars:
+    nginx_user: www-data
+  become:
+    true
+  become_method:
+    sudo
+  become_user:
+    root
+  remote_user:
+    u.tkachev
+  roles:
+   - nginx
